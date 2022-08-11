@@ -112,7 +112,7 @@ class NginxConfig(TargetConfig):
 
         return os.path.exists(self.config_filepath)
 
-    def create(self, htaccess_password: str = 'byoda'):
+    def create(self, htaccess_password: str = 'byoda'):     # nosec B107
         '''
         Creates the nginx virtual server configuration file. Also
         creates a 'htaccess' file that restricts access to the

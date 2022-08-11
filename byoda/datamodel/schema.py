@@ -348,7 +348,7 @@ class Schema:
         sys.modules[module_name] = module
 
         # Now we execute the code as being part of the module we generated
-        exec(code, module.__dict__)
+        exec(code, module.__dict__)             # nosec B102
 
         # Here we can the function of the module to extract the schema
         self.gql_schema = module.get_schema()

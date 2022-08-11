@@ -16,7 +16,7 @@ from pythonjsonlogger import jsonlogger
 from starlette_context import context
 
 
-LOGFILE = '/var/tmp/byoda.log'
+LOGFILE = '/var/tmp/byoda.log'      # nosec B108
 
 
 class Logger(logging.Logger):

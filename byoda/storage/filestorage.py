@@ -50,7 +50,7 @@ class FileStorage:
             if local_path:
                 self.local_path: str = '/' + local_path.strip('/') + '/'
             else:
-                self.local_path: str = '/tmp/'
+                self.local_path: str = '/tmp/'      # nosec B108
         else:
             if not local_path:
                 raise ValueError('Must specify local path')

@@ -66,7 +66,7 @@ class Paths:
     MEMBER_DATA_KEY_FILE           = 'private/network-{network}-account-{account}-member-{service_id}-data.key'                                                 # noqa
     MEMBER_DATA_FILE               = 'network-{network}/account-{account}/service-{service_id}/data/network-{network}-member-{service_id}-data.json'            # noqa
     MEMBER_DATA_PROTECTED_FILE     = 'network-{network}/account-{account}/service-{service_id}/data/network-{network}-member-{service_id}-data.json.protected'  # noqa
-    MEMBER_DATA_SHARED_SECRET_FILE = 'network-{network}/account-{account}/service-{service_id}/network-{network}-member-{service_id}-data.sharedsecret'         # noqa
+    MEMBER_DATA_SHARED_SECRET_FILE = 'network-{network}/account-{account}/service-{service_id}/network-{network}-member-{service_id}-data.sharedsecret'         # noqa  # nosec B105
 
     # Downloads
     NETWORK_CERT_DOWNLOAD      = 'https://dir.{network}/root-ca.pem'                                                                      # noqa

@@ -52,9 +52,9 @@ async def setup_network(test_dir: str) -> Dict[str, str]:
     os.environ['CLOUD'] = 'LOCAL'
     os.environ['NETWORK'] = 'byoda.net'
     os.environ['ACCOUNT_ID'] = str(uuid4())
-    os.environ['ACCOUNT_SECRET'] = 'test'
+    os.environ['ACCOUNT_SECRET'] = 'test'       # nosec B105
     os.environ['LOGLEVEL'] = 'DEBUG'
-    os.environ['PRIVATE_KEY_SECRET'] = 'byoda'
+    os.environ['PRIVATE_KEY_SECRET'] = 'byoda'  # nosec B105
     os.environ['BOOTSTRAP'] = 'BOOTSTRAP'
 
     network_data = get_environment_vars()

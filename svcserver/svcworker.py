@@ -81,7 +81,7 @@ async def main():
             'Could not write unprotected key, probably because it '
             'already exists'
         )
-        unprotected_key_file = f'/tmp/service-{service.service_id}.key'
+        unprotected_key_file = f'/var/tmp/service-{service.service_id}.key'     # nosec B108
 
     certkey = (
         service.paths.root_directory + '/' + service.tls_secret.cert_file,

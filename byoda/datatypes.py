@@ -175,8 +175,8 @@ class CertStatus(Enum):
 
 class AuthSource(Enum):
     NONE            = 'none'
-    CERT            = 'cert'
-    TOKEN           = 'token'
+    CERT            = 'cert'    # nosec B105
+    TOKEN           = 'token'   # nosec B105
 
 
 # MemberStatus is used for the MemberDB.status attribute

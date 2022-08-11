@@ -11,7 +11,7 @@ import logging
 import datetime
 import re
 import tempfile
-import subprocess
+import subprocess   # nosec B404
 from uuid import UUID
 from copy import copy
 from typing import TypeVar, List
@@ -369,7 +369,7 @@ class Secret:
             cmd.extend(['-untrusted', chainfile])
 
         cmd.append(certfile)
-        result = subprocess.run(cmd)
+        result = subprocess.run(cmd)        # nosec B603
 
         if result.returncode != 0:
             raise ValueError(
@@ -683,7 +683,7 @@ class Secret:
 
         return data.decode('utf-8')
 
-    def save_tmp_private_key(self, filepath: str = '/var/tmp/private.key'
+    def save_tmp_private_key(self, filepath: str = '/var/tmp/private.key'  # nosec B108
                              ) -> str:
         '''
         Create an unencrypted copy of the key to the /tmp directory

@@ -62,7 +62,7 @@ async def main(argv):
 
     root_dir = args.root_directory
 
-    if root_dir.startswith('/tmp') and os.path.exists(root_dir):
+    if root_dir.startswith('/tmp') and os.path.exists(root_dir):    # nosec B108
         _LOGGER.debug(f'Wiping temporary root directory: {root_dir}')
         shutil.rmtree(root_dir)
 

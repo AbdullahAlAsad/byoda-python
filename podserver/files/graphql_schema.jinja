@@ -99,7 +99,7 @@ def get_cursor_hash(data: Dict, origin: UUID, fields: List[str]) -> str:
     of the required fields of object
     '''
 
-    hash_gen = hashlib.sha1()
+    hash_gen = hashlib.sha256()
     for field in fields:
         hash_gen.update(str(data.get(field, '')).encode('utf-8'))
 
